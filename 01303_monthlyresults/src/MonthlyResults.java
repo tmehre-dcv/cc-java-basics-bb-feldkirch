@@ -25,6 +25,7 @@ public class MonthlyResults {
 
         int negativeFigureIntervalCount=0;
         int maxNegativeFigureIntervalCount=0;
+        boolean twoNegativeInARow=false;
 
         for (int i=0; i < businessResult.length;i++) {
             // Summieren
@@ -33,6 +34,9 @@ public class MonthlyResults {
             // negativ?
             if(businessResult[i]<0){
                 negativeFigureIntervalCount++;
+                if(negativeFigureIntervalCount==2){
+                    twoNegativeInARow=true;
+                }
             }else{
                 // aktuelles Maximum merken
                 if(negativeFigureIntervalCount>= maxNegativeFigureIntervalCount) {
@@ -46,13 +50,13 @@ public class MonthlyResults {
             // größer als aktuelles Maxium?
             if (businessResult[i] >= maxValue) {
                 maxValue = businessResult[i];
-                maxValIdx = i+1;
+                maxValIdx = i;
             }
 
             // kleiner oder gleich als aktuelles Minimum?
             if (businessResult[i] <= minValue) {
                 minValue = businessResult[i];
-                minValIdx = i+1;
+                minValIdx = i;
             }
         }
 
@@ -65,20 +69,20 @@ public class MonthlyResults {
         for(int i=0; i < businessResult.length; i++){
 
             boolean greaterOrEqualCurrentSecondBest = businessResult[i] >= secondBest;
-            boolean lessThanMaxValue = businessResult[i] < maxValue;
+            boolean lessThanMaxValue = businessResult[i] <= maxValue;
 
             // größer oder gleich bisher zweitbestes Ergebnis und kleiner als bestes Ergebnis
-            if(greaterOrEqualCurrentSecondBest && lessThanMaxValue){
+            if(greaterOrEqualCurrentSecondBest && lessThanMaxValue && i !=maxValIdx){
                 secondBest =businessResult[i];
             }
         }
 
         System.out.println("Summe der Ergebnisse: " + totalSum);
         System.out.println("Bestes Monatsergebnis: " + maxValue);
-        System.out.println("Monat mit bestem Ergebnis: " + maxValIdx);
+        System.out.println("Monat mit bestem Ergebnis: " + (maxValIdx+1));
         System.out.println("Schlechtestes Ergebnis: " + minValue);
-        System.out.println("Monat mit schlechtestem Ergebnis: " + minValIdx);
-        System.out.println("War zwei hintereinander kommende Monate mit negativen Ergebnis? " + minValIdx);
+        System.out.println("Monat mit schlechtestem Ergebnis: " + (minValIdx+1));
+        System.out.println("War zwei hintereinander kommende Monate mit negativen Ergebnis? " + twoNegativeInARow);
         System.out.println("Was war das längste Intervall mit negativen Ergebnis? " + maxNegativeFigureIntervalCount);
         System.out.println("Zweitbestes Ergebnis: " + secondBest);
     }
