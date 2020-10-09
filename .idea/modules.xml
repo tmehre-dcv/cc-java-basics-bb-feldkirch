@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/01303_monthlyresults/01303_monthlyresults.iml" filepath="$PROJECT_DIR$/01303_monthlyresults/01303_monthlyresults.iml" />
+      <module fileurl="file://$PROJECT_DIR$/01303_twitterstats/01303_twitterstats.iml" filepath="$PROJECT_DIR$/01303_twitterstats/01303_twitterstats.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/cc-javabasics-bb-feldkirch20.iml" filepath="$PROJECT_DIR$/.idea/cc-javabasics-bb-feldkirch20.iml" />
+    </modules>
+  </component>
+</project>
