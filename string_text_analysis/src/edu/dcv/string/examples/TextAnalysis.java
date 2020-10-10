@@ -1,3 +1,5 @@
+package edu.dcv.string.examples;
+
 /*
 Ein langer String über Hermann Hesse
 
@@ -11,6 +13,7 @@ _ Anzahl Wörter mit ausschließlich klein oder GROßBUCHSTABEN
 
  */
 public class TextAnalysis {
+
     private final static String text = "Zur Zeit des Zweiten Weltkriegs waren seine großen Werke Siddhartha und Der Steppenwolf noch verboten. Heute gehört Hermann Hesse zu den bekanntesten deutschen Schriftstellern. Mehr über den Weltveränderer lest ihr hier\n" +
             "Hermann Hesse\n" +
             "\n" +
@@ -81,5 +84,23 @@ public class TextAnalysis {
 
     public static void main(String[] args) {
 
+
+
+
+
+
+
+
+
+        // ImWinter;trage_ich Handschuhe.
+        // Aufgabe
+        // Wie viele Worte enthält die Zeichenfolge (Wort im Sinne durch Leerzeichen getrennt).
+        // Tipps: Worte lassen sich erkennen, wenn
+        // - sie von Leerzeichen umgeben sind
+        // - mit einem Großbuchstaben anfangen
+
+        // 1.) Satz sauber strukturieren (Leerzeichen an der richtigen Stelle einfügen, falsche Zeichen ersetzen)
+        // 2.) Worte ermitteln
+        // 3.) Worte zählen
     }
 }
