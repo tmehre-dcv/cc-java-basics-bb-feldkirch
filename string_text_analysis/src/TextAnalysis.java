@@ -1,3 +1,15 @@
+/*
+Ein langer String über Hermann Hesse
+
+
+_ Anzahl Characters
+_ Anzahl “echte” (ausgesprochen) Characters
+_ Anzahl Wörter
+_ Kürzeste / Längste Wort
+_ Anzahl vorkommen von Wort “Hesse”
+_ Anzahl Wörter mit ausschließlich klein oder GROßBUCHSTABEN
+
+ */
 public class TextAnalysis {
     private final static String text = "Zur Zeit des Zweiten Weltkriegs waren seine großen Werke Siddhartha und Der Steppenwolf noch verboten. Heute gehört Hermann Hesse zu den bekanntesten deutschen Schriftstellern. Mehr über den Weltveränderer lest ihr hier\n" +
             "Hermann Hesse\n" +
